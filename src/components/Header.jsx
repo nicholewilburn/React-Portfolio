@@ -23,7 +23,7 @@ function Header() {
       </Helmet>
       <nav className="container">
         <Link to="/" className="navbar-logo">
-        <img src="/public/images/logo.png" alt="My Image" />
+        <img src="/images/logo.png" alt="My Image" />
           Nichole Wilburn
         </Link>
         <ul className="navbar-nav">
