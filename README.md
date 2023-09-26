@@ -55,7 +55,7 @@ THEN I am presented with text or icon links to the developer’s GitHub and Link
 <a name="testIns"></a>
 ## Deployed Page
 
-coming soon
+https://nw-react-portfolio-f684fba42d32.herokuapp.com/
 
 <a name="license"></a>
 ## License
