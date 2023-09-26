@@ -1,42 +1,104 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
+  overflow-x:hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; /* Ensure vertical alignment */
+  align-items: flex-start; /* Align content to the top of the viewport */
+  justify-content: flex-start; /* Align content to the left */
+  min-height: 100vh; /* Ensure the body takes up at least the full viewport height */
+}
+
+div {
+  width: 100%;
+}
+
+/* OUR HEADER */
+.navbar {
+  background-color: #333; /* Background color of the header */
+  color: white; /* Text color for the header */
+  padding: 10px;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center items */
+  width: 100%; /* Make the header full-width */
+  margin: 0; /* Remove default margin */
+  justify-content: start; /* Space between items (left and right) */
+  flex-direction: column;
+}
+
+/* Style the logo/name */
+.navbar-logo {
+  font-size: 2rem; /* Adjust the font size as needed */
+  text-decoration: none; /* Remove underlines from the link */
+  padding-left: 5px;
+  color: white; /* Text color for the logo/name */
+  font-family: 'Pacifico', cursive;
+}
+
+/* Style the navigation links */
+.navbar-nav {
+  list-style: none; /* Remove bullet points from the list */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center navigation items */
+}
+
+/* Style individual navigation items (list items) */
+.nav-item {
+  margin-right: 20px; /* Add right margin between items */
+}
+
+/* Style the navigation links (anchor elements) */
+.nav-item a {
+  text-decoration: none; /* Remove underlines from the links */
+  color: white; /* Text color for the links */
+}
+
+/* Style the active link (when a link is selected) */
+.nav-item a.active {
+  font-weight: bold; /* Make the active link bold or add other styles as needed */
+}
+
+/* Media query for smaller screens (optional) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+    align-items: flex-start; /* Align items to the left on smaller screens */
+  }
+  .navbar-logo {
+    margin-bottom: 10px; /* Add margin between logo and navigation on smaller screens */
+  }
+}
+
+/* OUR FOOTER */
+footer {
+  background-color: #333; /* Background color of the header */
+  color: white; /* Text color for the header */
+  padding: 10px;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Vertically center items */
+  width: 100%; /* Make the header full-width */
+  margin: 0; /* Remove default margin */
+  justify-content: center; /* Space between items (left and right) */
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+footer a {
+  margin-right: 20px; /* Add right margin between items */
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+/* OUTLET */
+section {
+  width:50%;
+  text-align: center;
+  justify-content: center;
+  padding-left:25%;
+  padding-bottom: 25px;
 }

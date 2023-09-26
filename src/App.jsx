@@ -1,5 +1,6 @@
 // App.jsx
 import React from 'react';
+import './App.css'; 
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Layout from './components/Layout'; // Import your layout component
 import AboutMe from './components/AboutMe';

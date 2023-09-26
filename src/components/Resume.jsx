@@ -2,7 +2,7 @@ import React from 'react';
 
 function Resume() {
   return (
-    <div>
+    <section>
       <h2>Resume</h2>
       <p>
         You can download my resume <a href="your-resume-url.pdf">here</a>.
@@ -16,7 +16,7 @@ function Resume() {
         <li>SQL/Database Management</li>
         {/* Add more proficiencies as needed */}
       </ul>
-    </div>
+    </section>
   );
 }
 

@@ -21,7 +21,7 @@ function Contact() {
   };
 
   return (
-    <div>
+    <section>
       <h2>Contact</h2>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
@@ -58,7 +58,7 @@ function Contact() {
         </div>
         <button type="submit">Submit</button>
       </form>
-    </div>
+    </section>
   );
 }
 

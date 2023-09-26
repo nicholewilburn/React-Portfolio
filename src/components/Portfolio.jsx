@@ -13,14 +13,14 @@ function Portfolio() {
   ];
 
   return (
-    <div>
+    <section>
       <h2>Portfolio</h2>
       <div className="project-list">
         {projects.map((project, index) => (
           <Project key={index} project={project} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
