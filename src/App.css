@@ -1,42 +1,163 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
+  overflow-x:hidden;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  justify-content: flex-start; 
+  min-height: 100vh; 
+}
+
+div {
+  width: 100%;
+}
+
+/* OUR HEADER */
+.navbar {
+  background-color: #333; 
+  color: white; 
+  padding: 10px;
+  display: flex; 
+  align-items: center; 
+  width: 100%; 
+  margin: 0; 
+  justify-content: start; 
+  flex-direction: column;
+}
+
+/* Style the logo/name */
+.navbar-logo {
+  font-size: 2rem; 
+  text-decoration: none; 
+  padding-left: 5px;
+  color: white; 
+  font-family: 'Pacifico', cursive;
+}
+
+/* Style the navigation links */
+.navbar-nav {
+  list-style: none; 
+  margin: 0; 
+  padding: 0; 
+  display: flex; 
+  align-items: center; 
+}
+
+/* Style individual navigation items (list items) */
+.nav-item {
+  margin-right: 20px; 
+}
+
+/* Style the navigation links (anchor elements) */
+.nav-item a {
+  text-decoration: none; 
+  color: white; 
+}
+
+/* Style the active link (when a link is selected) */
+.nav-item a.active {
+  font-weight: bold; 
+}
+
+/* Media query for smaller screens (optional) */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; 
+    align-items: flex-start; 
+  }
+  .navbar-logo {
+    margin-bottom: 10px; 
+  }
+}
+
+/* OUR FOOTER */
+footer {
+  background-color: #333; 
+  color: white; 
+  padding: 10px;
+  display: flex; 
+  align-items: center; 
+  width: 100%; 
+  margin: 0; 
+  justify-content: center; 
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+footer a {
+  margin-right: 20px; 
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* OUTLET */
+section {
+  width:50%;
+  text-align: center;
+  justify-content: center;
+  padding-left:25%;
+  padding-bottom: 25px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/*flexbox for portfolio page to stack projects correctly*/
+.project-container {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
 }
 
-.card {
-  padding: 2em;
+.project {
+  width: calc(50% - 20px); /* Adjust the width as needed, considering margins */
+  margin: 10px; /* Add margin for spacing between projects */
 }
 
-.read-the-docs {
-  color: #888;
+/* STYLING PROJECT.JSX */
+.project {
+  position: relative;
+  text-align: center;
+}
+
+.project-image {
+  width: 100%;
+  max-width: 250px;
+  height: 200px;
+  transition: opacity 0.3s; /* Smooth opacity transition on hover */
+  z-index: 1; /* Ensure the image is above other elements */
+}
+
+.project:hover .project-image {
+  opacity: 0.25; /* Reduce opacity on hover */
+}
+
+.project-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  display: none; /* Hide project info by default */
+  z-index: 2; /* Place the info above the image */
+}
+
+.project:hover .project-info {
+  display: block; /* Show project info on hover */
+}
+
+.project h3 {
+  margin: 0;
+}
+
+.project-links a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin-top: 5px;
+  position: relative; /* Ensure links are in the correct stacking context */
+  z-index: 3; /* Place the links above other elements */
 }

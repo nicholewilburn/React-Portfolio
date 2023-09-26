@@ -1,12 +1,30 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 
 function Header() {
   return (
     <header className="navbar">
+       <Helmet>
+        <link
+          rel="preconnect"
+          href="https://fonts.googleapis.com"
+        />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+          rel="stylesheet"
+        />
+      </Helmet>
       <nav className="container">
         <Link to="/" className="navbar-logo">
-          Your Logo/Name
+        <img src="/public/images/logo.png" alt="My Image" />
+          Nichole Wilburn
         </Link>
         <ul className="navbar-nav">
           <li className="nav-item">

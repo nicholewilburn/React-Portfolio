@@ -4,23 +4,28 @@ import Project from './Project';
 function Portfolio() {
   const projects = [
     {
-      title: 'Project 1',
-      image: 'project1.jpg',
-      deployedLink: 'https://project1.com',
-      githubLink: 'https://github.com/project1',
+      title: 'JS Quiz Game',
+      image: 'p-img-02.png',
+      deployedLink: 'https://nicholewilburn.github.io/JS-Quiz-Game/',
+      githubLink: 'https://github.com/nicholewilburn/JS-Quiz-Game',
     },
-    // Add more project objects as needed
+    {
+      title: 'OG Codefolio',
+      image: 'p-img-01.png',
+      deployedLink: 'https://nicholewilburn.github.io/Coding-Portfolio/',
+      githubLink: 'https://github.com/nicholewilburn/Coding-Portfolio',
+    },
   ];
 
   return (
-    <div>
+    <section>
       <h2>Portfolio</h2>
-      <div className="project-list">
+      <div className="project-container">
         {projects.map((project, index) => (
           <Project key={index} project={project} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }
 
